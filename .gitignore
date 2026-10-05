@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code
+CLAUDE.md
+.claude/
+
+# Built extension packages and archives
+*.zip
+*.7z
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
