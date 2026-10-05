@@ -10,9 +10,23 @@ bundled NumPy.
 
 ## Install
 
-Download the latest release from https://github.com/haystax78/HyperDecimate/releases
-and extract into your addons directory. Alternatively the zip should support being installed as
-an extension but I haven't tested this.
+Download `hyper_decimate-<version>.zip` from the **Assets** list of the latest
+[release](https://github.com/haystax78/HyperDecimate/releases), then in Blender:
+
+**Edit ▸ Preferences ▸ Get Extensions ▸ ▾ ▸ Install from Disk…**
+
+**Installing manually as an add-on:** if you extract the files into your addons
+folder yourself, for example from GitHub's **Source code (zip)** link, the folder
+must be named exactly `HyperDecimate`. Blender names the module after the folder,
+so a name with a version number, such as `HyperDecimate-0.4.0`, cannot be imported
+and activation fails with `No module named 'HyperDecimate-0'`. Rename the folder
+and restart Blender.
+
+To build the zip from a source checkout:
+
+```bash
+blender --command extension build --source-dir . --output-dir .
+```
 
 ## Use
 

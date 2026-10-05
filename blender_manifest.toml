@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "hyper_decimate"
-version = "0.1.0"
+version = "0.4.0"
 name = "Hyper Decimate"
 tagline = "GPU quadric decimation for multi-million triangle sculpts"
 maintainer = "MattGPT"
@@ -27,4 +27,6 @@ paths_exclude_pattern = [
   "/tools/",
   "*.blend",
   "PLAN.md",
+  "CLAUDE.md",
+  "/.gitignore",
 ]
