@@ -2,7 +2,7 @@
 
 GPU mesh decimation for Blender, built for meshes large enough that Blender's own
 Decimate modifier becomes impractical. A 50-million-triangle scan preprocesses and decimates in
-under around 15 seconds on a 4090, and every target after that replays in a fraction of a second.
+around 15 seconds on a 4090, and every target after that replays in a small fraction of that.
 
 Requires Blender 5.2 or newer and a GPU Blender can run compute shaders on.
 No dependencies to install: the pipeline uses Blender's own `gpu` module and the
@@ -10,15 +10,9 @@ bundled NumPy.
 
 ## Install
 
-Download or build `hyper_decimate-<version>.zip`, then in Blender:
-
-**Edit ▸ Preferences ▸ Add-ons ▸ ▾ ▸ Install from Disk…**
-
-To build the zip from a source checkout:
-
-```bash
-blender --command extension build --source-dir . --output-dir .
-```
+Download the latest release from https://github.com/haystax78/HyperDecimate/releases
+and extract into your addons directory. Alternatively the zip should support being installed as
+an extension but I haven't tested this.
 
 ## Use
 
@@ -33,6 +27,10 @@ made by this add-on, the source it decimates from.
 The run is cancellable with **Esc** or right-click, and reports progress on the
 panel throughout. When it produces a new object, that object is left selected and
 active.
+
+After decimation, if the original mesh has been replaced, you don't need to undo
+in order to decimate to a different triangle count as the original mesh is
+still cached and preprocessed.
 
 ## Settings
 
